@@ -3,34 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>MP2 Starter</title>
+  <title>Welcome to Chanterelle's Cats</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
 </head>
 
 <body>
-  <nav class="top-bar">
-    <div class="top-bar-left">
+
+  <div class="title-bar sticky-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Chanterelle's Cats</div>
+  </div>
+  <div class="top-bar sticky-bar" id="nav-menu">
+    <div class="top-bar-left show-for-medium">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">MP2</li>
-        <li><a href="https://courses.engr.illinois.edu/cs498rk1/">Web Page</a></li>
+        <li class="menu-text header-text">Chanterelle's Cats</li>
       </ul>
     </div>
-  </nav>
-	<div class="row text-center">
-		<h3>Hello. It's Me.</h3>
-	</div>
-	<section class="row">
-		<div class="alert columns small-12 large-6">
-			<div class="text-center"><img src="http://lorempixel.com/400/200/cats"/></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-      </p>
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li><a href="#" section="intro">Welcome</a></li>
+        <li><a href="#" section="about">About Us</a></li>
+        <li><a href="#" section="testimonials">Testimonials</a></li>
+        <li><a href="#" section="gallery">Gallery</a></li>
+        <li><a href="#" section="contact">Contact Us</a></li>
+      </ul>
     </div>
-		<div class="columns small-12 large-6">
-	  	<div class="text-center"><img src="http://lorempixel.com/400/200/nature"/></div>
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!
-      </p>
+  </div>
+  <div class="nav-padding"></div>
+
+  <section id="intro" class="column row expanded">
+    <div class="small-12 columns">
+      <div class="flex-video widescreen">
+        <div class="video-overlay intro-info show-for-large">
+          <div class="info-title"><h1 class="header-text header-color">Chanterelle's Cats</h1></div>
+          <div class="info-body"><p class="body-text">Chanterelle's Cats is home to the most adorable cats and kittens you'll ever meet.</p></div>
+        </div>
+        <video autoplay loop muted id="bgvid">
+          <source src="./media/cats.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hide-for-large text-center">
+        <div class="info-title header-text"><h1 class="header-text header-color">Chanterelle's Cats</h1></div>
+        <div class="info-body"><p class="body-text">Chanterelle's Cats is home to the most adorable cats and kittens you'll ever meet.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="column row transparent padded expanded">
+      <div class="wrapper transparent fullscreen">
+        <div class="columns small-12 medium-6 translucent-container align-top">
+          <h1 class="header-text header-color">About Us</h1>
+          <p class="body-text">We are a small time, family-owned pet store located in Urbana, IL. Though we do have all types of pets, we mainly specialize in cats and cat goods. Our friendly, trained staff are experts in pet care and will be able to answer any and all questions you may have about owning or taking care of your pet. Our address is 201 N. Goodwin Ave. Urbana, IL 61801.</p>
+        </div>
+        <div class="columns small-12 medium-6 gmaps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.277064993952!2d-88.22626458434293!3d40.113828581928914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd76baa8479a9%3A0x8ec514357f13b9f3!2s201+N+Goodwin+Ave%2C+Urbana%2C+IL+61801!5e0!3m2!1sen!2sus!4v1457058874105" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+  </section>
+
+  <section class="column row padded expanded" id="testimonials">
+    <div class="row">
+      <h1 class="header-text header-color">Testimonials</h1>
+    </div>
+    <div class="row align-stretch">
+      <div class="columns small-10 small-centered small-up-1 medium-up-2 large-up-3" data-equalizer data-equalizer-mq="medium-up">
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-1">
+            <img src="./media/cat1.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">I've had Natalie for the past two years and she's just the cutest thing ever. She's very playful and energetic and I love having her in my house. Never a dull day with this cat! Thanks Chanterelle's Cats!</p>
+        </div>
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-2">
+            <img src="./media/cat2.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">Rocky is the chillest cat you'll ever meet. He likes to sit at my computer and act like he's a professional e-sports player just like me. What a baller cat. Couldn't have asked for any other.</p>
+        </div>
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-3">
+            <img src="./media/cat3.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">Kenny does really weird things. He'll scowl at you one moment, then raise his paw and ask for a high five. He almost acts like he never grew past the kitten stage. But even though he might be weird, he's a great cat to have around.</p>
+        </div>
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-4">
+            <img src="./media/cat4.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">Max is a really quiet cat. He sneaks around all the time and hardly makes any noise while doing so. My children take it as a challenge to play hide and seek with him every weekend, and they absolutely adore him. Thanks for entertaining my kids, Chanterelle's Cats!</p>
+        </div>
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-5">
+            <img src="./media/cat5.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">Myranda likes to watch me go on reddit and view cat pics. She meows every time she sees a new picture. I can almost swear she's laughing at me for wasting my time on the internet.</p>
+        </div>
+        <div class="column callout testimonial" data-equalizer-watch>
+          <a data-open="img-modal-box-6">
+            <img src="./media/cat6.png" alt="Cat" class="modal">
+          </a>
+          <p class="body-text-2">Katara is a very serious cat. Just look at her stern look! But once she gets to know you, Katara loves to do all sorts of cute cat things like meowing and licking you all over. I absolutely love her!</p> 
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" id="img-modal-box-1" data-reveal>
+      <img id="modal-img" src="./media/cat1.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="reveal" id="img-modal-box-2" data-reveal>
+      <img id="modal-img" src="./media/cat2.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="reveal" id="img-modal-box-3" data-reveal>
+      <img id="modal-img" src="./media/cat3.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="reveal" id="img-modal-box-4" data-reveal>
+      <img id="modal-img" src="./media/cat4.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="reveal" id="img-modal-box-5" data-reveal>
+      <img id="modal-img" src="./media/cat5.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="reveal" id="img-modal-box-6" data-reveal>
+      <img id="modal-img" src="./media/cat6.png">
+      <button class="close-button" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </section>
+  <section class="column row padded expanded" id="gallery">
+    <div class="row">
+      <h1 class="header-text header-color">Cat Gallery</h1>
+    </div>
+    <div class="row">
+      <div class="slider carousel small-10 small-centered medium-8 large-6 columns">
+        <img src="./media/cat1.png">
+        <img src="./media/cat2.png">
+        <img src="./media/cat3.png">
+        <img src="./media/cat4.png">
+        <img src="./media/cat5.png">
+        <img src="./media/cat6.png">
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="column row padded expanded">
+    <div class="row">
+      <h1 class="header-text header-color">Contact Us</h1>
+    </div>
+    <div class="row">
+      <div class="columns small-6 medium-3">
+        <a href="#" class="social">
+          <span class="fa fa-facebook-square fa-5x"></span>
+        </a>
+      </div>
+      <div class="columns small-6 medium-3">
+        <a href="#" class="social">
+          <span class="fa fa-instagram fa-5x"></span>
+        </a>
+      </div>
+      <div class="columns small-6 medium-3">
+        <a href="#" class="social">
+          <span class="fa fa-youtube-square fa-5x"></span>
+        </a>
+      </div>
+      <div class="columns small-6 medium-3">
+        <a href="#" class="social">
+          <span class="fa fa-envelope fa-5x"></span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -38,6 +193,7 @@
   
   <script src="./lib/jquery-2.1.3.min/index.js"></script>
   <script src="./foundation6_lib/js/foundation.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
   <script src="./js/script.js"></script>
   <script>
     $(document).foundation();

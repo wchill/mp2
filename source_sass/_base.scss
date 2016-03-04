@@ -1,7 +1,254 @@
 // Add any custom Sass & CSS here
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Passion+One|Pacifico');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import url('http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css');
+@import url('http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css');
 
-body{
-	@include breakpoint(medium down){
-		background: red !important;
-	}
+header, nav, a, li, h1 {
+  @include transition(all 1000ms);
+}
+
+.menu {
+  li {
+    a {
+      font-size: 0.8em;
+    }
+  }
+}
+
+ul .vertical {
+  z-index: 999;
+}
+
+.title-bar-title {
+  font-family: Pacifico;  
+  text-align: center;
+}
+
+.header-text {
+  font-family: Pacifico;  
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  border-radius: 10px;
+  padding: 10px;
+  p {
+    margin: 15px;
+  }
+}
+
+.align-stretch {
+  margin-bottom: 0px;
+} 
+
+.header-color {
+  color: $white;
+}
+
+.body-text {
+  color: $white;
+  font-family: Bree Serif; 
+}
+
+.body-text-2 {
+  font-family: Bree Serif; 
+}
+
+section {
+  width: 100%;
+  position: relative;
+  background-color: $dark-grey;
+
+  &.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+  }
+
+  &:nth-of-type(2n) {
+    background-color: $less-dark-grey;
+  }
+
+  &.padded {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media only screen and (max-width: 40em) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media only screen and (min-width: 40.063em) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.gmaps {
+  iframe {
+    @media only screen and (max-width: 40em) {
+      width: 250px;
+      height: 300px;
+    }
+    @media only screen and (min-width: 40.063em) {
+      width: 450px;
+      height: 450px;
+    }
+    border: 0;
+  }
+}
+
+.title-bar {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+}
+
+.top-bar {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  left:0;
+  z-index: 100;
+  @media only screen and (max-width: 40em) {
+    top: 41px;
+  }
+  @media only screen and (min-width: 40.063em) {
+    top: 0px;
+  }
+}
+
+body { 
+  background: url(../media/cat-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*
+img.bg {
+  min-height: 100%;
+  min-width: 1080px;
+  
+  width: 100%;
+  height: auto;
+  
+  position: fixed;
+  left: 0;
+  z-index: -100;
+  @media only screen and (max-width: 40em) {
+    top: 41px;
+  }
+  @media only screen and (min-width: 40.063em) {
+    top: 54px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  img.bg {
+    left: 50%;
+    margin-left: -540px;
+  }
+}
+*/
+
+div {
+  display: block;
+
+  &.flex-video {
+    margin: 10px 10px 10px;
+  }
+
+  &.nav-padding {
+    @media only screen and (max-width: 40em) {
+      height: 41px;
+    }
+    @media only screen and (min-width: 40.063em) {
+      height: 54px;
+    }
+  }
+  
+  &.wrapper {
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &.video-overlay {
+    display: table-cell;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    max-width: 60%;
+    text-align: center;
+    padding: $overlay-margin;
+    color: #FFFFFF;
+    background-color: rgba(50,50,50,0.3);
+    border-radius: 40px;
+    @include transform(translateX(-50%) translateY(0));
+    z-index: 5;
+  }
+  &.intro-info {
+    display: table-cell;
+    text-align: center;
+  }
+  &.info-title {
+    font-size: 50px;
+    @media (max-width: 1280px) {
+      font-size: 40px;
+    }
+  }
+  &.info-body {
+    font-size: 20px;
+    margin: $overlay-margin;
+    @media (max-width: 1280px) {
+      font-size: 15px;
+      margin: 10px;
+    }
+  }
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.translucent-container {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: rgba(0,0,0,0.3) !important;
+  border-radius: 40px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 40em) {
+    margin-top: 0px;
+  }
+  @media only screen and (min-width: 40.063em) {
+    margin-top: 100px;
+  }
+}
+
+.slider {
+  height: 100%;
+  text-align: center;
+}
+
+.social {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  color: $white;
+  &:hover {
+    color: $grey;
+  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
